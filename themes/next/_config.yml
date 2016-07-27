@@ -30,7 +30,7 @@ canonical: true
 menu:
   home: /
   #categories: /categories
-  about: /about
+  #about: /about
   archives: /archives
   tags: /tags
   #commonweal: /404.html
@@ -134,14 +134,14 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
+  # Twitter: twitter
   Weibo: weibo
 
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar:/uploads/avatar.jpg
+#avatar:
 
 
 # Table Of Contents in the Sidebar
