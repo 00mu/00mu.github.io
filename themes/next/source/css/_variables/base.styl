@@ -2,7 +2,12 @@
 // Variables
 // =================================================
 
+// 自定义颜色
+$html-bg-color = #f5f5f5;
+$primary-bg-color = #1fa67a;
 
+$html-color = #333;
+$primary-color = #379BE9;
 
 // Colors
 // colors for use across theme.
@@ -10,7 +15,7 @@
 
 $whitesmoke   = #f5f5f5
 $gainsboro    = #eee
-$gray-lighter = #ddd
+$gray-lighter = #d6dbdf
 $grey-light   = #ccc
 $grey         = #bbb
 $grey-dark    = #999
@@ -20,7 +25,7 @@ $black-dim    = #333
 $black-deep   = #222
 $red          = #ff2a2a
 $blue-bright  = #87daff
-$blue         = #0684bd
+$blue         = $primary-color
 $blue-deep    = #262a30
 $orange       = #fc6423
 
@@ -46,7 +51,7 @@ $border-color                 = $grey-light
 $body-bg-color                = white
 
 // Selection
-$selection-bg                 = $blue-deep
+$selection-bg                 = $primary-color
 $selection-color              = white
 
 
@@ -91,7 +96,7 @@ $font-weight-bolder       = 700
 
 
 // Font size
-$font-size-base           = 14px
+$font-size-base           = 16px
 $font-size-small          = $font-size-base - 2px
 $font-size-smaller        = $font-size-base - 4px
 $font-size-large          = $font-size-base + 2px
@@ -99,16 +104,16 @@ $font-size-larger         = $font-size-base + 4px
 
 
 // Headings font size
-$font-size-headings-step    = 2px
-$font-size-headings-base    = 24px
+$font-size-headings-step    = 4px
+$font-size-headings-base    = 32px
 $font-size-headings-small   = $font-size-headings-base - $font-size-headings-step
 $font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step
 $font-size-headings-large   = $font-size-headings-base + $font-size-headings-step
 $font-size-headings-larger  = $font-size-headings-large + $font-size-headings-step
 
 // Global line height
-$line-height-base           = 2
-$line-height-code-block     = 1.6  // Can't be less than 1.3
+$line-height-base           = 1.8
+$line-height-code-block     = 1.8  // Can't be less than 1.3
 
 
 
@@ -142,7 +147,7 @@ $table-row-hover-bg-color       = $whitesmoke
 // Code & Code Blocks
 // --------------------------------------------------
 $code-font-family               = $font-family-monospace
-$code-font-size                 = 13px
+$code-font-size                 = 14px
 $code-background                = $gainsboro
 $code-foreground                = $black-light
 $code-border-radius             = 4px
@@ -155,14 +160,14 @@ $code-border-radius             = 4px
 $btn-font-weight                = normal
 
 $btn-default-radius             = 0
-$btn-default-bg                 = $black-deep
+$btn-default-bg                 = whit
 $btn-default-color              = white
 $btn-default-font-size          = 14px
-$btn-default-border-width       = 2px
-$btn-default-border-color       = $black-deep
-$btn-default-hover-bg           = white
-$btn-default-hover-color        = $black-deep
-$btn-default-hover-border-color = $black-deep
+$btn-default-border-width       = 1px
+$btn-default-border-color       = $primary-color
+$btn-default-hover-bg           = $primary-color
+$btn-default-hover-color        = $primary-color
+$btn-default-hover-border-color = $primary-color
 
 
 
@@ -188,10 +193,10 @@ $pagination-active-border       = $grey-light
 // Layout sizes
 // --------------------------------------------------
 
-$main-desktop                   = 960px
+$main-desktop                   = 1080px
 $main-desktop-large             = 1200px
 
-$content-desktop                = 700px
+$content-desktop                = 820px
 $content-desktop-large          = 900px
 $content-desktop-padding        = 40px
 
@@ -226,7 +231,7 @@ $logo-font-size                 = 20px
 $logo-font-size                 = unit(hexo-config('font.logo.size'), px) if hexo-config('font.logo.size') is a 'unit'
 
 $site-subtitle-color            = $grey-dark
-$subtitle-font-size             = 13px
+$subtitle-font-size             = 14px
 $subtitle-color                 = $grey-dark
 
 // Menu
@@ -279,7 +284,7 @@ $site-description-align               = center
 $site-state-align                     = center
 $site-state-item-count-font-size      = 18px
 $site-state-item-count-color          = inherit
-$site-state-item-name-font-size       = 13px
+$site-state-item-name-font-size       = 14px
 $site-state-item-name-color           = inherit
 $site-state-item-border-color         = $black-dim
 
@@ -303,7 +308,7 @@ $b2t-position-bottom-on       = 19px
 $b2t-position-right           = 50px
 $b2t-font-size                = 12px
 $b2t-color                    = white
-$b2t-bg-color                 = $black-deep
+$b2t-bg-color                 = $primary-bg-color
 
 
 //  .post-expand .post-eof

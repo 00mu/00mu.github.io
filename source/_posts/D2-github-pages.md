@@ -1,7 +1,8 @@
-[TOC]
+title: GitHub pages 搭建记录
+tags: git GitHub
+---
 
-# GitHub pages 使用教程
-
+<!-- more -->
 ## GitHub 与 git 关联
 
 首先安装好 Git Bash ，按步骤将 git 与 GitHub 关联起来
@@ -12,7 +13,7 @@
 
   检查本机的ssh密钥，提示 " No such file or directory " 则需要生成新的 SSH keys
 
-2. 生成新的 SSH Key
+2.  生成新的 SSH Key
 
   > $ ssh-keygen -t rsa -C "xxx@xxxmail.com"
 
@@ -35,7 +36,7 @@
   +----[SHA256]-----+
   ```
 
-3. 将 SSH keys 添加到 GitHub
+3.  将 SSH keys 添加到 GitHub
 
   根据上面窗口提示找到 id_rsa.pub 文件，内容复制到 GitHub.com > Personal settings > SSH keys (_New SSH key_)，保存即可。
 
@@ -51,15 +52,13 @@
 
 5. 设置账号信息
 
-  > $ git config --global user.name "your_name"
-  > $ git config --global user.email "your_email@youremail.com"
+  > $ git config --global user.name "your_name" $ git config --global user.email "your_email@youremail.com"
 
   > $ git config --list // 查看git配置信息
 
-
 ## 使用 GitHub Pages 搭建博客
 
-  [参见官方介绍](https://pages.github.com/)
+[参见官方介绍](https://pages.github.com/)
 
 1. 创建一个与用户名一致的仓库，如 00mu.github.com 。一个 GitHub 账户只有一个，此仓库也将是你的主页地址
 2. 将仓库 clone 到本地

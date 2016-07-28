@@ -22,9 +22,17 @@
 .posts-expand .post-body {
   +desktop() { text-align: justify; }
 
+  h1{
+    margin: 50px 0 20px;
+  }
+  h2{
+     margin: 35px 0 20px;
+  }
+  h3{
+    margin: 20px 0 20px;
+  }
 
   h2, h3, h4, h5, h6 {
-    padding-top: 10px;
 
     .header-anchor{
       float: right;
@@ -42,7 +50,7 @@
       visibility: visible;
     }
   }
-  
+
   ul li { list-style: circle; }
 
   img {
@@ -50,6 +58,24 @@
     margin: auto;
     padding: 3px;
     border: 1px solid $gray-lighter;
+  }
+
+  a[target="_blank"]{
+
+    &::after{
+      display: inline-block;
+      margin-left: 3px;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: .6em;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\f1d8";
+    }
+
+    &:hover::after{
+      color: $primary-color;
+    }
   }
 }
 

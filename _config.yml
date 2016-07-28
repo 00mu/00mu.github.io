@@ -3,12 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 很高兴遇到你
-subtitle:
-description:
+title: 觉醒吧少年
+subtitle: 前端学习，从头开始
+description: 保持耐心，反复来过，直至成功
 author: 周波
 language: zh-Hans
 timezone:
+avatar: /images/zhoubo.jpg
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -67,5 +68,5 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type:
+# deploy: git
+#   type: https://github.com/00mu/00mu.github.io.git
