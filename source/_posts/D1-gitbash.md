@@ -1,5 +1,8 @@
 ---
 title: 初始化git环境
+tags:
+  - git
+  - Git Bash
 ---
 
 # 初始化git环境

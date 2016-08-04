@@ -84,15 +84,15 @@
 
 
 
-<meta name="description" content="保持耐心，反复来过，直至成功">
+<meta name="description" content="保持耐心，反复来过，别瞎折腾">
 <meta property="og:type" content="website">
-<meta property="og:title" content="觉醒吧少年">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="觉醒吧少年">
-<meta property="og:description" content="保持耐心，反复来过，直至成功">
+<meta property="og:title" content="O X">
+<meta property="og:url" content="https://00mu.github.io/index.html">
+<meta property="og:site_name" content="O X">
+<meta property="og:description" content="保持耐心，反复来过，别瞎折腾">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="觉醒吧少年">
-<meta name="twitter:description" content="保持耐心，反复来过，直至成功">
+<meta name="twitter:title" content="O X">
+<meta name="twitter:description" content="保持耐心，反复来过，别瞎折腾">
 
 
 
@@ -113,9 +113,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="https://00mu.github.io/"/>
 
-  <title> 觉醒吧少年 </title>
+  <title> O X </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,11 +157,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">觉醒吧少年</span>
+      <span class="site-title">O X</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">前端学习，从头开始</p>
+  <p class="site-subtitle">看看能坚持到哪</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -290,49 +290,12 @@
 
       
         
-          
-            <h1 id="GitHub-pages-使用教程"><a href="#GitHub-pages-使用教程" class="headerlink" title="GitHub pages 使用教程"></a>GitHub pages 使用教程</h1><h2 id="GitHub-与-git-关联"><a href="#GitHub-与-git-关联" class="headerlink" title="GitHub 与 git 关联"></a>GitHub 与 git 关联</h2><p>首先安装好 Git Bash ，按步骤将 git 与 GitHub 关联起来</p>
-<ol>
-<li><p>检查 SSH keys 设置</p>
-<blockquote>
-<p>$ cd ~/. ssh</p>
-</blockquote>
-<p>检查本机的ssh密钥，提示 “ No such file or directory “ 则需要生成新的 SSH keys</p>
-</li>
-<li><p>生成新的 SSH Key</p>
-<blockquote>
-<p>$ ssh-keygen -t rsa -C “xxx@xxxmail.com”</p>
-</blockquote>
-<p>一路回车，看到下面的界面，就表明生成成功了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">The key fingerprint is:</div><div class="line">SHA256:deq65ahsK3kXY7xuTo5eIplsJLnKlwJTlHPcxb9v/GQ xxx@xxx.com</div><div class="line">The key&apos;s randomart image is:</div><div class="line">+---[RSA 2048]----+</div><div class="line">|   o . o.        |</div><div class="line">|  + o . .        |</div><div class="line">| . o     .. .    |</div><div class="line">|  ..     ..o     |</div><div class="line">| .o .  .S ..     |</div><div class="line">|o  = o  =..      |</div><div class="line">|... B...o+oo  E  |</div><div class="line">|.o +ooo*+=  +o   |</div><div class="line">|..o  =*BB... ..  |</div><div class="line">+----[SHA256]-----+</div></pre></td></tr></table></figure>
-</li>
-<li><p>将 SSH keys 添加到 GitHub</p>
-<p>根据上面窗口提示找到 id_rsa.pub 文件，内容复制到 GitHub.com &gt; Personal settings &gt; SSH keys (<em>New SSH key</em>)，保存即可。</p>
-</li>
-<li><p>测试关联是否成功</p>
-<blockquote>
-<p>$ ssh -T git@github.com</p>
-</blockquote>
-<p>对话输入 yes 后，提示如下界面就成功了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi xx! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
-</li>
-<li><p>设置账号信息</p>
-<blockquote>
-<p>$ git config –global user.name “your_name” $ git config –global user.email “your_email@youremail.com”</p>
-<p>$ git config –list // 查看git配置信息</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="使用-GitHub-Pages-搭建博客"><a href="#使用-GitHub-Pages-搭建博客" class="headerlink" title="使用 GitHub Pages 搭建博客"></a>使用 GitHub Pages 搭建博客</h2><p><a href="https://pages.github.com/" target="_blank" rel="external">参见官方介绍</a></p>
-<ol>
-<li>创建一个与用户名一致的仓库，如 00mu.github.com 。一个 GitHub 账户只有一个，此仓库也将是你的主页地址</li>
-<li>将仓库 clone 到本地</li>
-<li>跟目录编辑 index.html ，此页面将作为主页</li>
-<li>push 到远程仓库</li>
-<li>随后访你的主页即可呈现。</li>
-</ol>
-
-          
+          <p>大二的时候开始摆置WordPress搭建Blog，写的都是一些流水账，并没有坚持写来下，毕业后渐渐不再维护了。就是那时的摸索把玩对 Html + CSS 产生了兴趣，从此成了一名切图仔。现在算重拾乐趣，何况 GitHub 提供福利，无需域名服务器便可拥有个人站点。「GitHub pages」+「Hexo」搭建博客，步骤记录如下</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/15/D2-github-pages/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -380,7 +343,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/15/D1-gitbash-user/" itemprop="url">
+                <a class="post-title-link" href="/2016/07/15/D1-gitbash/" itemprop="url">
                   初始化git环境
                 </a>
               
@@ -569,102 +532,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/14/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-14T18:57:05+08:00" content="2016-07-14">
-              2016-07-14
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/14/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -701,12 +568,12 @@
                src="/images/zhoubo.jpg"
                alt="周波" />
           <p class="site-author-name" itemprop="name">周波</p>
-          <p class="site-description motion-element" itemprop="description">保持耐心，反复来过，直至成功</p>
+          <p class="site-description motion-element" itemprop="description">保持耐心，反复来过，别瞎折腾</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -716,7 +583,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -727,6 +594,26 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/00mu/00mu.github.io" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:595754999@126.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
           
         </div>
 

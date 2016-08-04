@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 觉醒吧少年
-subtitle: 前端学习，从头开始
-description: 保持耐心，反复来过，直至成功
+title: O X
+subtitle: 看看能坚持到哪
+description: 干啥就干啥，别墨迹，别瞎折腾
 author: 周波
 language: zh-Hans
 timezone:
@@ -13,7 +13,7 @@ avatar: /images/zhoubo.jpg
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://00mu.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -68,5 +68,6 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-# deploy: git
-#   type: https://github.com/00mu/00mu.github.io.git
+deploy:
+  type: git
+  repo: https://github.com/00mu/00mu.github.io.git
