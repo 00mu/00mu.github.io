@@ -83,14 +83,21 @@ tags:
     [https://github.com/iissnan/hexo-theme-next/issues/857]
 
 
-### 3.1. 直接使用本站主题
+### 3.2. 直接使用本站主题
 
   [NexT.Pisces-个人版](https://github.com/00mu/00mu.github.io/tree/source)，位于00mu.github.io库source分支下
 
 
-## 4. 使用 GitHub Pages 搭建静态页
+## 4. 熟记几个命令
 
-  另外介绍下搭建静态页面，直接把资源push上即可
+  - ` hexo generate ` 编译
+  - ` hexo server ` 启动本地服务器，localhost:4000 可见
+  - ` hexo deploy` 编译文件部署到 Github ，https://00mu.github.io/ 可见
+
+
+## 其他
+
+  另外介绍下 GitHub Pages 搭建静态页面，直接把资源push上即可
 
   [参见官方介绍](https://pages.github.com/)
 

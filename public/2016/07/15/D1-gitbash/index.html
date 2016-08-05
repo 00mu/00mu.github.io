@@ -84,39 +84,18 @@
 
 
 
-<meta name="description" content="初始化git环境安装
-windows平台下载安装 [https://git-for-windows.github.io/]
-git --help git git帮助文档
-
-设置提交者识别信息
-设置全局Name和Email地址
-
-git config –global user.name “Your Name” git config –global user.email “email@example.">
+<meta name="description" content="混 Github 同性社区 git 是必备的。公司代码协作也从 SVN 迁移到 git ，趁机把日常用到的一些简单命令做个梳理，以备脑短路时查阅。本文会持续更正更新…">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初始化git环境">
+<meta property="og:title" content="Git Bash 入门手册">
 <meta property="og:url" content="https://00mu.github.io/2016/07/15/D1-gitbash/index.html">
 <meta property="og:site_name" content="O X">
-<meta property="og:description" content="初始化git环境安装
-windows平台下载安装 [https://git-for-windows.github.io/]
-git --help git git帮助文档
-
-设置提交者识别信息
-设置全局Name和Email地址
-
-git config –global user.name “Your Name” git config –global user.email “email@example.">
-<meta property="og:image" content="https://00mu.github.io/git-stage.png">
-<meta property="og:updated_time" content="2016-08-03T07:33:06.140Z">
+<meta property="og:description" content="混 Github 同性社区 git 是必备的。公司代码协作也从 SVN 迁移到 git ，趁机把日常用到的一些简单命令做个梳理，以备脑短路时查阅。本文会持续更正更新…">
+<meta property="og:image" content="https://00mu.github.io/article_images/D1_git-stage.png">
+<meta property="og:updated_time" content="2016-08-05T12:02:10.673Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初始化git环境">
-<meta name="twitter:description" content="初始化git环境安装
-windows平台下载安装 [https://git-for-windows.github.io/]
-git --help git git帮助文档
-
-设置提交者识别信息
-设置全局Name和Email地址
-
-git config –global user.name “Your Name” git config –global user.email “email@example.">
-<meta name="twitter:image" content="https://00mu.github.io/git-stage.png">
+<meta name="twitter:title" content="Git Bash 入门手册">
+<meta name="twitter:description" content="混 Github 同性社区 git 是必备的。公司代码协作也从 SVN 迁移到 git ，趁机把日常用到的一些简单命令做个梳理，以备脑短路时查阅。本文会持续更正更新…">
+<meta name="twitter:image" content="https://00mu.github.io/article_images/D1_git-stage.png">
 
 
 
@@ -139,7 +118,7 @@ git config –global user.name “Your Name” git config –global user.email �
 
   <link rel="canonical" href="https://00mu.github.io/2016/07/15/D1-gitbash/"/>
 
-  <title> 初始化git环境 | O X </title>
+  <title> Git Bash 入门手册 | O X </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -268,7 +247,7 @@ git config –global user.name “Your Name” git config –global user.email �
             
             
               
-                初始化git环境
+                Git Bash 入门手册
               
             
           </h1>
@@ -308,11 +287,13 @@ git config –global user.name “Your Name” git config –global user.email �
       
 
       
-        <h1 id="初始化git环境"><a href="#初始化git环境" class="headerlink" title="初始化git环境"></a>初始化git环境</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+        <p>混 Github 同性社区 git 是必备的。公司代码协作也从 SVN 迁移到 git ，趁机把日常用到的一些简单命令做个梳理，以备脑短路时查阅。本文会持续更正更新…</p>
+<a id="more"></a>
+<h2 id="1-Git-Bash-环境配置"><a href="#1-Git-Bash-环境配置" class="headerlink" title="1. Git Bash 环境配置"></a>1. Git Bash 环境配置</h2><h3 id="1-1-安装-Git-Bash"><a href="#1-1-安装-Git-Bash" class="headerlink" title="1.1. 安装 Git Bash"></a>1.1. 安装 Git Bash</h3><ul>
 <li>windows平台下载安装 [<a href="https://git-for-windows.github.io/" target="_blank" rel="external">https://git-for-windows.github.io/</a>]</li>
 <li><code>git --help git</code> git帮助文档</li>
 </ul>
-<h2 id="设置提交者识别信息"><a href="#设置提交者识别信息" class="headerlink" title="设置提交者识别信息"></a>设置提交者识别信息</h2><ul>
+<h3 id="1-2-设置提交者识别信息"><a href="#1-2-设置提交者识别信息" class="headerlink" title="1.2. 设置提交者识别信息"></a>1.2. 设置提交者识别信息</h3><ul>
 <li><p>设置全局Name和Email地址</p>
 <blockquote>
 <p>git config –global user.name “Your Name” git config –global user.email “email@example.com”</p>
@@ -324,16 +305,16 @@ git config –global user.name “Your Name” git config –global user.email �
 </blockquote>
 </li>
 </ul>
-<h2 id="创建工作区域"><a href="#创建工作区域" class="headerlink" title="创建工作区域"></a>创建工作区域</h2><ul>
-<li>mkdir HtmlCode 创建工作区</li>
-<li>cd HtmlCode 进入文件夹</li>
-<li>pwd 显示当前目录</li>
+<h3 id="1-3-创建工作区域"><a href="#1-3-创建工作区域" class="headerlink" title="1.3. 创建工作区域"></a>1.3. 创建工作区域</h3><ul>
+<li><code>mkdir HtmlCode</code> 创建工作区</li>
+<li><code>cd HtmlCode</code> 进入文件夹</li>
+<li><code>pwd</code> 显示当前目录</li>
 </ul>
-<h2 id="创建本地仓库"><a href="#创建本地仓库" class="headerlink" title="创建本地仓库"></a>创建本地仓库</h2><ul>
-<li><code>git init</code> 在工作区创建git管理仓库</li>
+<h3 id="1-4-创建本地仓库"><a href="#1-4-创建本地仓库" class="headerlink" title="1.4. 创建本地仓库"></a>1.4. 创建本地仓库</h3><ul>
+<li><code>git init</code> 在工作区创建git管理仓库 <em>或者clone一个远程库</em></li>
 <li><code>git clone [url] D://HtmlCode</code> 克隆远程版本库并更名</li>
 </ul>
-<h1 id="简约工作流"><a href="#简约工作流" class="headerlink" title="简约工作流"></a>简约工作流</h1><p>你的本地仓库由 git 维护的三棵”树”组成。第一个是你的「工作目录」，它持有实际文件；第二个是「缓存区（Index）」，临时保存你的改动；最后是「HEAD」，指向你最近一次提交后的结果。</p>
+<h2 id="2-git-基本操作"><a href="#2-git-基本操作" class="headerlink" title="2. git 基本操作"></a>2. git 基本操作</h2><h3 id="2-1-一次简单的提交"><a href="#2-1-一次简单的提交" class="headerlink" title="2.1. 一次简单的提交"></a>2.1. 一次简单的提交</h3><p>  本地仓库由 git 维护的三棵”树”组成。第一个是你的「工作目录」，它持有实际文件；第二个是「缓存区（Index）」，临时保存你的改动；最后是「HEAD」，指向你最近一次提交后的结果。</p>
 <ul>
 <li><code>git status</code> 查看当前仓库实时状态</li>
 <li><code>git diff</code> 查看变更内容</li>
@@ -341,16 +322,16 @@ git config –global user.name “Your Name” git config –global user.email �
 <li><code>git commit -m &quot;说明话术&quot;</code> 现在，你的改动已经提交到了 HEAD，但是还没到你的远端仓库</li>
 <li><code>git push</code> 推送到远程服务器</li>
 </ul>
-<h1 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h1><h2 id="查看提交记录"><a href="#查看提交记录" class="headerlink" title="查看提交记录"></a>查看提交记录</h2><ul>
+<h3 id="2-2-查看提交记录"><a href="#2-2-查看提交记录" class="headerlink" title="2.2. 查看提交记录"></a>2.2. 查看提交记录</h3><ul>
 <li><code>git log</code> 查看提交历史</li>
 <li><code>git log --oneline</code></li>
 <li><code>git reflog</code> 查看命令历史，以便回到未来的版本</li>
 </ul>
-<h2 id="清理untracked文件"><a href="#清理untracked文件" class="headerlink" title="清理untracked文件"></a>清理untracked文件</h2><ul>
+<h3 id="2-3-清理untracked文件"><a href="#2-3-清理untracked文件" class="headerlink" title="2.3.  清理untracked文件"></a>2.3.  清理untracked文件</h3><ul>
 <li><code>git clean -f</code> 删除所有 untracked 文件</li>
 <li><code>git clean -fd</code> 连同 untracked 目录一并删除 <em>建议删除前加上 -n 预览会删除哪些文件，以免误删</em> <code>git clear -nfd</code></li>
 </ul>
-<h2 id="回退文件"><a href="#回退文件" class="headerlink" title="回退文件"></a>回退文件</h2><p><img src="git-stage.png" alt="工作区、版本库、暂存区原理图"></p>
+<h3 id="2-4-回退文件"><a href="#2-4-回退文件" class="headerlink" title="2.4. 回退文件"></a>2.4. 回退文件</h3><p>  <img src="/article_images/D1_git-stage.png" alt="工作区、版本库、暂存区原理图"></p>
 <ul>
 <li><code>git checkout -- &lt;file1&gt; &lt;file2&gt;</code> 此命令会使用 HEAD 中的最新内容替换掉你的工作目录中的文件。这个操作很危险，会清除工作区中未添加到暂存区的改动,已添加到缓存区的改动，以及新文件，都不受影响</li>
 <li><code>git checkout -f</code> 丢弃工作区、缓存区所有修改。清除commit之前的所有修改</li>
@@ -364,7 +345,7 @@ git config –global user.name “Your Name” git config –global user.email �
 </li>
 <li><code>git rm --cached &lt;file1&gt; &lt;file2&gt;</code> 直接从暂存区删除文件，工作区则不做出改变</li>
 </ul>
-<h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><ul>
+<h2 id="3-多分支操作"><a href="#3-多分支操作" class="headerlink" title="3. 多分支操作"></a>3. 多分支操作</h2><h3 id="3-1-分支管理"><a href="#3-1-分支管理" class="headerlink" title="3.1 分支管理"></a>3.1 分支管理</h3><ul>
 <li><code>git fetch –p</code> 更新分支列表</li>
 <li><code>git branch</code> 查看当前分支，当前分支前面会标一个「*」</li>
 <li><code>git branch -r</code> 查看远程分支</li>
@@ -376,19 +357,20 @@ git config –global user.name “Your Name” git config –global user.email �
 <li><code>git merge &lt;branch&gt;</code> 合并某分支到当前分支</li>
 <li><code>git branch -D &lt;branch&gt;</code> 删除某分支</li>
 </ul>
-<h2 id="远程分支管理"><a href="#远程分支管理" class="headerlink" title="远程分支管理"></a>远程分支管理</h2><h3 id="查看远程分支"><a href="#查看远程分支" class="headerlink" title="查看远程分支"></a>查看远程分支</h3><ul>
-<li><code>git fetch</code> 将远程分支信息获取到本地</li>
-<li><code>git branch -r</code> 查看远程分支 <code>git fetch</code></li>
-<li><p><code>git branch -ar</code> 查看本地+远程分支及最后一次log</p>
-<h4 id="从远程分支开新分支"><a href="#从远程分支开新分支" class="headerlink" title="从远程分支开新分支"></a>从远程分支开新分支</h4></li>
-<li><p><code>git checkout -b &lt;localBranch&gt; &lt;remotes/origin/remoteBranch&gt;</code> 远程分支映射到本地分支</p>
-<h4 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h4></li>
-<li><p><code>git pull origin &lt;remoteBranch&gt;:&lt;localBranch&gt;</code> 将远程某分支与指定的本地分支合并</p>
-</li>
-<li><p><code>git pull origin &lt;remoteBranch&gt;</code> 将远程某分支与当前分支合并</p>
-<h4 id="push"><a href="#push" class="headerlink" title="push"></a>push</h4></li>
-<li><p><code>git push &lt;origin&gt; &lt;localBranch&gt;:&lt;remoteBranch&gt;</code> 本地分支推送到远程分支，如果远程不存在此分支则会被新建</p>
-</li>
+<h3 id="3-2-查看远程分支"><a href="#3-2-查看远程分支" class="headerlink" title="3.2. 查看远程分支"></a>3.2. 查看远程分支</h3><ul>
+<li><code>git fetch</code> 更新远程分支信息</li>
+<li><code>git branch -r</code> 查看远程分支</li>
+<li><code>git branch -ar</code> 查看本地+远程分支及最后一次log</li>
+</ul>
+<h4 id="3-2-1-从远程分支开新分支"><a href="#3-2-1-从远程分支开新分支" class="headerlink" title="3.2.1. 从远程分支开新分支"></a>3.2.1. 从远程分支开新分支</h4><ul>
+<li><code>git checkout -b &lt;localBranch&gt; &lt;remotes/origin/remoteBranch&gt;</code> 远程分支映射到本地分支</li>
+</ul>
+<h4 id="3-2-2-pull"><a href="#3-2-2-pull" class="headerlink" title="3.2.2. pull"></a>3.2.2. pull</h4><ul>
+<li><code>git pull origin &lt;remoteBranch&gt;:&lt;localBranch&gt;</code> 将远程某分支与指定的本地分支合并</li>
+<li><code>git pull origin &lt;remoteBranch&gt;</code> 将远程某分支与当前分支合并</li>
+</ul>
+<h4 id="3-2-3-push"><a href="#3-2-3-push" class="headerlink" title="3.2.3. push"></a>3.2.3. push</h4><ul>
+<li><code>git push &lt;origin&gt; &lt;localBranch&gt;:&lt;remoteBranch&gt;</code> 本地分支推送到远程分支，如果远程不存在此分支则会被新建</li>
 <li><code>git branch --set-upstream-to=origin/&lt;branch&gt;</code> 本地当前分支与远程分支建立追踪关系</li>
 <li><code>git branch -vv</code> 查看追踪关系</li>
 <li><code>git push &lt;origin&gt;</code> 如果当前分支与远程分支存在追踪关系，则可直接push到主机</li>
@@ -401,8 +383,7 @@ git config –global user.name “Your Name” git config –global user.email �
 <p>推送时省略本地分支则会删除指定的远程的分支 *注意不要省略<code>:</code>前的空格</p>
 </li>
 </ul>
-<h1 id="git-flow"><a href="#git-flow" class="headerlink" title="git flow"></a>git flow</h1><p><strong>HotFix</strong> 及 <strong>紧急上线</strong> 流程参照沙洲邮件</p>
-<h2 id="紧急上线"><a href="#紧急上线" class="headerlink" title="紧急上线"></a>紧急上线</h2><ol>
+<h2 id="3-Work-Flow"><a href="#3-Work-Flow" class="headerlink" title="3. Work Flow"></a>3. Work Flow</h2><h3 id="3-1-紧急上线"><a href="#3-1-紧急上线" class="headerlink" title="3.1. 紧急上线"></a>3.1. 紧急上线</h3><ol>
 <li><code>git checkout -b bug_xxx remotes/origin/master</code> 从远程master分支创建bug_分支（切换分支时建议关闭VS）</li>
 <li>本地开发-完成 （新资源通常需要包含进VS项目中）</li>
 <li>无法获取时，请先保存本地代码 <code>git stash</code></li>
@@ -410,15 +391,14 @@ git config –global user.name “Your Name” git config –global user.email �
 <li>将 <code>stash</code> 的代码 <code>git stash pop</code> 恢复到工作区</li>
 <li><code>git add .</code> <code>git commit -m &quot;话术&quot;</code> commit 本次更改，不是自己更改的文件不要提交</li>
 <li><code>git push -u origin bug_xxx</code> 推送本分支到远程作为一个远程新分支</li>
-<li><a href="https://tfsgit.tujia.com/tfs/Root/_git/tujia/pullrequests" target="_blank" rel="external">打开服务器网站</a>，发起「pull request」,将 _bug<em>xxx</em> 合并到 <em>master</em></li>
+<li>发起「pull request」,将 _bug<em>xxx</em> 合并到 <em>master</em></li>
 <li>合并时再次 review 对比代码确认下都是自己提交。如有冲突等，解决冲突后push&amp;pullRequest，敦促版本管理员处理</li>
-<li>合并结束后前往<a href="http://deploy.fvt.tujia.com/EmergentRequest" target="_blank" rel="external">BVT部署</a></li>
 <li>测试无误删除服务器bug_xxx分支</li>
 <li>PS. 切换分支的时候建议关闭VS</li>
 </ol>
-<h2 id="HotFix"><a href="#HotFix" class="headerlink" title="HotFix"></a>HotFix</h2><p>见沙洲邮件↓</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">0   接到在vNext上开发feature_1功能的任务</div><div class="line">1   将源代码当前分支切换到vNext上   Git checkout vNext</div><div class="line">2   拉取最新vNext分支 Git pull origin vNext</div><div class="line">3   从本地vNext上创建feature_1分支  Git branch vNext_featue_1 vNext</div><div class="line">4   切换到feature_1分支上 Git checkout vNext_feature_1</div><div class="line">5   本地完成开发，提交到feature_1分支   Git commit</div><div class="line">6   推送本地feature_1分支到服务器 Git push –u origin vNext_feature_1</div><div class="line">7   打开服务器网站，发起pull request请求</div><div class="line">8   选择从feature_1分支合并到vNext分支</div><div class="line">9   管理员审批拉取请求</div><div class="line"></div><div class="line">10  看到自己的拉取请求已完成</div><div class="line">11  删除远程feature_1分支 Git push origin :vNext_feature_1</div><div class="line">12  到部署网站上申请部署fvt测试</div><div class="line">13  协助测试完成fvt测试</div><div class="line">9-&gt;9.1  如果管理员发现合并冲突，拉取请求被拒绝</div><div class="line">10.1    切换到vNext分支  Git checkout vNext</div><div class="line">11.1    获取最新vNext信息 Git pull origin vNext</div><div class="line">12.1    切换到feature_1分支  Git checkout vNext_feature_1</div><div class="line">13.1    本地合并vNext和feature_1 Git merge vNext</div><div class="line">14.1    提交合并结果  Git commit</div><div class="line">15.1    重复6~13步骤</div><div class="line">13-&gt;13.2    如测试发现有bug， fvt测试不通过</div><div class="line">14.2    重复1~13步骤</div></pre></td></tr></table></figure>
-<h1 id="解决-pullRequest-冲突"><a href="#解决-pullRequest-冲突" class="headerlink" title="解决 pullRequest 冲突"></a>解决 pullRequest 冲突</h1><p>eg. vNext_promotion 合并到 vNext 时冲突</p>
+<h2 id="3-21-HotFix"><a href="#3-21-HotFix" class="headerlink" title="3.21 HotFix"></a>3.21 HotFix</h2><p>  0   接到在vNext上开发feature_1功能的任务<br>  1   将源代码当前分支切换到vNext上   Git checkout vNext<br>  2   拉取最新vNext分支 Git pull origin vNext<br>  3   从本地vNext上创建feature_1分支  Git branch vNext_featue_1 vNext<br>  4   切换到feature_1分支上 Git checkout vNext_feature_1<br>  5   本地完成开发，提交到feature_1分支   Git commit<br>  6   推送本地feature_1分支到服务器 Git push –u origin vNext_feature_1<br>  7   打开服务器网站，发起pull request请求<br>  8   选择从feature_1分支合并到vNext分支<br>  9   管理员审批拉取请求</p>
+<p>  10  看到自己的拉取请求已完成<br>  11  删除远程feature_1分支 Git push origin :vNext_feature_1<br>  12  到部署网站上申请部署fvt测试<br>  13  协助测试完成fvt测试<br>  9-&gt;9.1  如果管理员发现合并冲突，拉取请求被拒绝<br>  10.1    切换到vNext分支  Git checkout vNext<br>  11.1    获取最新vNext信息 Git pull origin vNext<br>  12.1    切换到feature_1分支  Git checkout vNext_feature_1<br>  13.1    本地合并vNext和feature_1 Git merge vNext<br>  14.1    提交合并结果  Git commit<br>  15.1    重复6~13步骤<br>  13-&gt;13.2    如测试发现有bug， fvt测试不通过<br>  14.2    重复1~13步骤</p>
+<h3 id="解决-pullRequest-冲突"><a href="#解决-pullRequest-冲突" class="headerlink" title="解决 pullRequest 冲突"></a>解决 pullRequest 冲突</h3><p>eg. vNext_promotion 合并到 vNext 时冲突</p>
 <ul>
 <li>首先，你将需要确保 vNext_promotion 和 vNext 分支是最新的: git fetch origin git checkout -b vNext_promotion origin/vNext_promotion</li>
 <li>接下来，将 vNext 中的更改合并到 vNext_promotion 中，并解决冲突: git checkout vNext_promotion git merge origin/vNext</li>
@@ -527,7 +507,7 @@ git config –global user.name “Your Name” git config –global user.email �
                src="/images/zhoubo.jpg"
                alt="周波" />
           <p class="site-author-name" itemprop="name">周波</p>
-          <p class="site-description motion-element" itemprop="description">保持耐心，反复来过，别瞎折腾</p>
+          <p class="site-description motion-element" itemprop="description">干啥就干啥，别墨迹，别瞎折腾</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -542,7 +522,7 @@ git config –global user.name “Your Name” git config –global user.email �
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -556,7 +536,7 @@ git config –global user.name “Your Name” git config –global user.email �
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/00mu/00mu.github.io" target="_blank" title="GitHub">
+                <a href="https://github.com/00mu/" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -565,11 +545,11 @@ git config –global user.name “Your Name” git config –global user.email �
               </span>
             
               <span class="links-of-author-item">
-                <a href="mailto:595754999@126.com" target="_blank" title="Email">
+                <a href="http://codepen.io/zhoubo/" target="_blank" title="CODEPEN">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-codepen"></i>
                   
-                  Email
+                  CODEPEN
                 </a>
               </span>
             
@@ -591,7 +571,7 @@ git config –global user.name “Your Name” git config –global user.email �
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化git环境"><span class="nav-number">1.</span> <span class="nav-text">初始化git环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置提交者识别信息"><span class="nav-number">1.2.</span> <span class="nav-text">设置提交者识别信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建工作区域"><span class="nav-number">1.3.</span> <span class="nav-text">创建工作区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建本地仓库"><span class="nav-number">1.4.</span> <span class="nav-text">创建本地仓库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简约工作流"><span class="nav-number">2.</span> <span class="nav-text">简约工作流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#历史"><span class="nav-number">3.</span> <span class="nav-text">历史</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看提交记录"><span class="nav-number">3.1.</span> <span class="nav-text">查看提交记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清理untracked文件"><span class="nav-number">3.2.</span> <span class="nav-text">清理untracked文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回退文件"><span class="nav-number">3.3.</span> <span class="nav-text">回退文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#远程仓库"><span class="nav-number">4.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理"><span class="nav-number">4.1.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程分支管理"><span class="nav-number">4.2.</span> <span class="nav-text">远程分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看远程分支"><span class="nav-number">4.2.1.</span> <span class="nav-text">查看远程分支</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#从远程分支开新分支"><span class="nav-number">4.2.1.1.</span> <span class="nav-text">从远程分支开新分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pull"><span class="nav-number">4.2.1.2.</span> <span class="nav-text">pull</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#push"><span class="nav-number">4.2.1.3.</span> <span class="nav-text">push</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-flow"><span class="nav-number">5.</span> <span class="nav-text">git flow</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#紧急上线"><span class="nav-number">5.1.</span> <span class="nav-text">紧急上线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HotFix"><span class="nav-number">5.2.</span> <span class="nav-text">HotFix</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决-pullRequest-冲突"><span class="nav-number">6.</span> <span class="nav-text">解决 pullRequest 冲突</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Git-Bash-环境配置"><span class="nav-text">1. Git Bash 环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-安装-Git-Bash"><span class="nav-text">1.1. 安装 Git Bash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-设置提交者识别信息"><span class="nav-text">1.2. 设置提交者识别信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-创建工作区域"><span class="nav-text">1.3. 创建工作区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-创建本地仓库"><span class="nav-text">1.4. 创建本地仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-git-基本操作"><span class="nav-text">2. git 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-一次简单的提交"><span class="nav-text">2.1. 一次简单的提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-查看提交记录"><span class="nav-text">2.2. 查看提交记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-清理untracked文件"><span class="nav-text">2.3.  清理untracked文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-回退文件"><span class="nav-text">2.4. 回退文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-多分支操作"><span class="nav-text">3. 多分支操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-分支管理"><span class="nav-text">3.1 分支管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-查看远程分支"><span class="nav-text">3.2. 查看远程分支</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-从远程分支开新分支"><span class="nav-text">3.2.1. 从远程分支开新分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-2-pull"><span class="nav-text">3.2.2. pull</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-3-push"><span class="nav-text">3.2.3. push</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Work-Flow"><span class="nav-text">3. Work Flow</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-紧急上线"><span class="nav-text">3.1. 紧急上线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-21-HotFix"><span class="nav-text">3.21 HotFix</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决-pullRequest-冲突"><span class="nav-text">解决 pullRequest 冲突</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -614,7 +594,7 @@ git config –global user.name “Your Name” git config –global user.email �
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">周波</span>
+  <a class="author" href="mailto:595754999@qq.com" itemprop="copyrightHolder">周波</a>
 </div>
 
 <div class="powered-by">

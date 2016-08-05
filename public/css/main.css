@@ -219,51 +219,51 @@ h6 {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 h1 {
-  font-size: 28px;
+  font-size: 30px;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 h2 {
-  font-size: 24px;
+  font-size: 26px;
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 @media (max-width: 767px) {
   h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h4 {
-  font-size: 16px;
+  font-size: 18px;
 }
 @media (max-width: 767px) {
   h4 {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 h5 {
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (max-width: 767px) {
   h5 {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 h6 {
-  font-size: 8px;
+  font-size: 10px;
 }
 @media (max-width: 767px) {
   h6 {
-    font-size: 4px;
+    font-size: 6px;
   }
 }
 p {
@@ -503,7 +503,7 @@ code {
   padding: 2px 4px;
   margin: 0 5px;
   word-break: break-all;
-  color: #555;
+  color: #333;
   background: #eee;
   border-radius: 4px;
   font-size: 14px;
@@ -1032,7 +1032,7 @@ pre .javascript .function {
 }
 @media (max-width: 767px) {
   .posts-expand {
-    margin: 0 20px;
+    margin: 0 15px;
   }
   .post-body pre,
   .post-body .highlight {
@@ -1559,7 +1559,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b8bf3c;
+  background: #ff2eff;
 }
 .links-of-blogroll {
   font-size: 14px;
@@ -2241,7 +2241,7 @@ body {
 @media (max-width: 767px) {
   .content-wrap {
     width: 100%;
-    padding: 20px;
+    padding: 0;
     min-height: auto;
   }
 }
@@ -2548,4 +2548,29 @@ post-title {
 .posts-expand .post-eof,
 .posts-expand .post-title-link::before {
   background-color: #379be9;
+}
+.links-of-author-item {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .posts-expand .post-meta {
+    margin-bottom: 15px;
+  }
+  .post-more-link {
+    margin-top: 15px;
+  }
+  .posts-expand .post-eof {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  .posts-expand .post-body h2 {
+    margin: 15px 0 10px;
+  }
+  .post-body ol {
+    margin-left: 10px;
+    padding-left: 20px;
+  }
 }
