@@ -1,5 +1,5 @@
 ---
-title: Git Bash 入门手册
+title: Git 入门手册
 tags:
   - git
   - Git Bash
