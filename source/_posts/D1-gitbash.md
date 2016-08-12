@@ -9,16 +9,41 @@ tags:
 
 <!-- more -->
 
-## 1. Git Bash 环境配置
+## 1. Git 起步
 
 
-### 1.1. 安装 Git Bash
+### 1.1. 仓库的概念
+
+  Git 由 工作区（workspace）、暂存区（index）、本地仓库（local repository），远程仓库（remote repository）组成
+
+#### 1.1.1 解释说明
+
+  - 远程仓库： 远程仓库是指托管在网络上的项目仓库，它们是一些无法移动的本地分支；只有在 Git 进行网络交互时才会更新。同他人协作开发某个项目时，需要管理这些远程仓库，以便推送或拉取数据，分享各自的工作进展。
+  - 远程分支： 远程引用是对远程仓库的引用（指针），包括分支、标签等等，只有在 Git 进行网络交互时才会更新。我理解的是 *远程分支* 存放在 *本地仓库*
+
+#### 1.1.2 文件的三种状态
+
+  对于任何一个文件，在 Git 内都只有三种状态：已提交（committed），已修改（modified）和已暂存（staged）。
+
+  - 已提交表示该文件已经被安全地保存在本地数据库中了；
+  - 已修改表示修改了某个文件，但还没有提交保存；
+  - 已暂存表示把已修改的文件放在下次提交时要保存的清单中。
+
+#### 1.1.3 基本的 Git 工作流程
+
+  1. 在工作目录中修改某些文件。
+  2. 对修改后的文件进行快照，然后保存到暂存区域。
+  3. 提交更新，将保存在暂存区域的文件快照永久转储到 Git 目录中。近乎所有操作都是本地执行，也是 *分布式工作流程* 的魅力所在
+  4. 功能开发完毕推送到远程仓库，便可协同开发了
+
+
+### 1.2. 安装 Git Bash
 
   - windows平台下载安装 [<https://git-for-windows.github.io/>]
   - `git --help git` git帮助文档
 
 
-### 1.2. 设置提交者识别信息
+### 1.3. 运行 Git 前的配置
 
   - 设置全局Name和Email地址
 
@@ -28,44 +53,67 @@ tags:
 
     > git config user.name "Your Name" git config user.email "email@example.com" git config --list 查看配置信息
 
+  - 文本编辑器，Git 需要你输入一些额外消息的时候，默认 Vi 或者 Vim
 
-### 1.3. 创建工作区域
+    > git config --global core.editor atom
+
+  - 查看配置信息
+
+    > git config --list
+
+
+
+## 2. Git 基础
+
+### 2.2. Git 基础操作
+
+#### 2.2.1. 取得项目的 Git 仓库
+
+##### 进入工作目录
 
   - `mkdir HtmlCode` 创建工作区
   - `cd HtmlCode` 进入文件夹
   - `pwd` 显示当前目录
 
+##### 在此目录初始化仓库 或 从现有仓库克隆一份
 
-### 1.4. 创建本地仓库
-
-  - `git init` 在工作区创建git管理仓库 *或者clone一个远程库*
+  - `git init` 在工作区创建git管理仓库 or *clone一个远程库*
   - `git clone [url] D://HtmlCode` 克隆远程版本库并更名
 
+#### 2.2.2.  记录每次更新到仓库
 
-## 2. git 基本操作
-
-### 2.1. 一次简单的提交
-
-  本地仓库由 git 维护的三棵"树"组成。第一个是你的「工作目录」，它持有实际文件；第二个是「缓存区（Index）」，临时保存你的改动；最后是「HEAD」，指向你最近一次提交后的结果。
-
-  - `git status` 查看当前仓库实时状态
-  - `git diff` 查看变更内容
+  - `git status` 检查当前仓库文件状态
   - `git add .` 指明要追踪文件，把目标文件放入暂存区域
   - `git commit -m "说明话术"` 现在，你的改动已经提交到了 HEAD，但是还没到你的远端仓库
-  - `git push` 推送到远程服务器
+  - `git push` 推送到远程仓库
+
+#### 2.2.3. 查看提交历史
+
+  - `git log` 默认不用任何参数的话，git log 会按提交时间列出所有的更新，最近的更新排在最上面。看到了吗，每次更新都有一个 SHA-1 校验和、作者的名字和电子邮件地址、提交时间，最后缩进一个段落显示提交说明。
+  - `git log -p -2` 我们常用 -p 选项展开显示每次提交的内容差异，用 -2 则仅显示最近的两次更新
+  - `git log --oneline` 精简模式
+  - `git reflog` 查看命令历史，以便回到未来的版本
 
 
-### 2.2. 查看提交记录
+### 2.3. 撤消操作
 
-- `git log` 查看提交历史
-- `git log --oneline`
-- `git reflog` 查看命令历史，以便回到未来的版本
+#### 2.3.1. 修改最后一次提交
 
+  有时候我们提交完了才发现漏掉了几个文件没有加，或者提交信息写错了。想要撤消刚才的提交操作，可以使用--amend 选项重新提交：
 
-### 2.3.  清理untracked文件
+  ```
+  git commit -m 'initial commit'
+  git add forgotten_file
+  git commit --amend
+  ```
 
-  - `git clean -f` 删除所有 untracked 文件
-  - `git clean -fd` 连同 untracked 目录一并删除 _建议删除前加上 -n 预览会删除哪些文件，以免误删_ `git clear -nfd`
+  上面的三条命令最终只是产生一个提交，第二个提交命令修正了第一个的提交内容。
+
+#### 2.3.2. 取消已经暂存的文件
+
+  ```
+  git reset HEAD <files>
+  ```
 
 
 ### 2.4. 回退文件
@@ -89,103 +137,101 @@ tags:
   - `git rm --cached <file1> <file2>` 直接从暂存区删除文件，工作区则不做出改变
 
 
-## 3. 多分支操作
+### 2.5.  清理untracked文件
+
+  - `git clean -f` 删除所有 untracked 文件
+  - `git clean -fd` 连同 untracked 目录一并删除 _建议删除前加上 -n 预览会删除哪些文件，以免误删_ `git clear -nfd`
+
+
+## 3. Git 分支
 
 ### 3.1 分支管理
 
-- `git fetch –p` 更新分支列表
-- `git branch` 查看当前分支，当前分支前面会标一个「*」
-- `git branch -r` 查看远程分支
-- `git branch -a` 查看所有分支
-- `git branch -va` 查看所有分支+log
-- `git branch <branch>` 创建分支
-- `git checkout <branch>` 切换分支
-- `git checkout -b <branch>` 创建+切换分支
-- `git merge <branch>` 合并某分支到当前分支
-- `git branch -D <branch>` 删除某分支
+  - `git fetch –p` 更新分支列表
+  - `git branch` 查看当前分支，当前分支前面会标一个「*」
+  - `git branch -r` 查看远程分支
+  - `git branch -a` 查看所有分支
+  - `git branch -va` 查看所有分支+log
+  - `git branch -ar` 查看本地+远程分支及最后一次log
+  - `git branch <branch>` 创建分支
+  - `git checkout <branch>` 切换分支
+  - `git checkout -b <branch>` 创建+切换分支
+  - `git merge <branch>` 合并某分支到当前分支
+  - `git branch -D <branch>` 删除某分支
 
 
-### 3.2. 查看远程分支
+### 3.2. 与远程仓库交互
 
-- `git fetch` 更新远程分支信息
-- `git branch -r` 查看远程分支
-- `git branch -ar` 查看本地+远程分支及最后一次log
+#### 3.2.1. 更新远程分支信息
+
+  - `git fetch` 将远程主机的更新全部取回本地，fetch 回来的分支，用 origin/branch_xx 格式访问
+  - `git fetch origin master` 取回 origin 主机的 master 分支
 
 
 #### 3.2.1. 从远程分支开新分支
 
-  - `git checkout -b <localBranch> <remotes/origin/remoteBranch>` 远程分支映射到本地分支
+  1. `git fetch origin <remoteBranch>` 从远程仓库取回指定分支作为远程分支
+  2. `git checkout -b <localBranch> <origin/remoteBranch>` 在此远程分支上创建一个新分支
 
 
-#### 3.2.2. pull
+#### 3.2.2. 远程主机上的分支 合并到 本地分支
 
+  - `git pull origin <remoteBranch>` 将远程仓库指定分支与当前分支合并
   - `git pull origin <remoteBranch>:<localBranch>` 将远程某分支与指定的本地分支合并
-  - `git pull origin <remoteBranch>` 将远程某分支与当前分支合并
+  - `git merge origin/<remoteBranch>` 将远程分支merge到本分支
+
+##### pull 和 merge 的区别
+
+  - git pull 等同于先做 `git fetch`,再做 `git merge`
+  - git fetch是将远程仓库的更新获取到本地仓库，不影响其他区域
+  - git pull则是一次性将远程仓库的代码更新到工作区（同时也会更新本地仓库）。
 
 
-#### 3.2.3. push
+  ```
+  git fetch origin <remoteBranch>
+  git merge <origin/remoteBranch>
+  ```
 
-  - `git push <origin> <localBranch>:<remoteBranch>` 本地分支推送到远程分支，如果远程不存在此分支则会被新建
+
+#### 3.2.3. 推送本地分支推送到远程仓库
+
+  - `git push -u origin <branch>` 将本地分支推送到远程仓库同时指定默认主机，之后不用加任何参数直接使用 `git push`
+  - `git push <origin> <localBranch>:<remoteBranch>` 本地分支推送到远程仓库，如果远程不存在此分支则会被新建
   - `git branch --set-upstream-to=origin/<branch>` 本地当前分支与远程分支建立追踪关系
   - `git branch -vv` 查看追踪关系
   - `git push <origin>` 如果当前分支与远程分支存在追踪关系，则可直接push到主机
   - `git push` 如果当前分支有且只有一个追踪分支，那么主机名亦可省略
-  - `git push -u origin <branch>` 将本地分支推送到远程分支同时指定默认主机，之后不用加任何参数直接使用 `git push`
 
-  - > git branch -D branch git push origin :remoteBranch
+##### 删除本地及远程分支
 
-    推送时省略本地分支则会删除指定的远程的分支 *注意不要省略`:`前的空格
+  -  `git branch -D <branch1> <branch2>` 同时删除本地若干分支
+  -  `git push origin :<remoteBranch>` 推送时省略本地分支则会删除指定的远程的分支，同事从远程仓库指针。 *注意不要省略`:`前的空格
 
 
-## 3. Work Flow
+## 4. Git WorkFlow
 
-### 3.1. 紧急上线
+### 4.1. 一次完整的 bugFix 流程
 
-  1. `git checkout -b bug_xxx remotes/origin/master` 从远程master分支创建bug_分支（切换分支时建议关闭VS）
-  2. 本地开发-完成 （新资源通常需要包含进VS项目中）
-  3. 无法获取时，请先保存本地代码 `git stash`
-  4. `git pull origin master` 拉取最新代码到本地
-  5. 将 `stash` 的代码 `git stash pop` 恢复到工作区
-  6. `git add .` `git commit -m "话术"` commit 本次更改，不是自己更改的文件不要提交
-  7. `git push -u origin bug_xxx` 推送本分支到远程作为一个远程新分支
-  8. 发起「pull request」,将 _bug_xxx_ 合并到 _master_
-  9. 合并时再次 review 对比代码确认下都是自己提交。如有冲突等，解决冲突后push&pullRequest，敦促版本管理员处理
-  11. 测试无误删除服务器bug_xxx分支
-  12. PS. 切换分支的时候建议关闭VS
+  1. `git fetch orign master` 从远程仓库指定一个分支拉取到本地远程分支
+  2. `git checkout -b <bug_xxx> origin/master` 从远程master分支创建 bug_xxx 分支
+  2. 本地分支开发代码
+  6. `git add .` `git commit -m "话术"` commit 本次更改
+  7. `git push -u origin <branch_feature>` 推送本分支到远程作为一个远程新分支
+  8. 发起「pull request」,将 <bug_xxx> 合并到 master
+  11. PR 被管理员接受即完成本次流程，已废弃分支建议及时删除
 
-## 3.21 HotFix
 
-  0   接到在vNext上开发feature_1功能的任务
-  1   将源代码当前分支切换到vNext上   Git checkout vNext
-  2   拉取最新vNext分支 Git pull origin vNext
-  3   从本地vNext上创建feature_1分支  Git branch vNext_featue_1 vNext
-  4   切换到feature_1分支上 Git checkout vNext_feature_1
-  5   本地完成开发，提交到feature_1分支   Git commit
-  6   推送本地feature_1分支到服务器 Git push –u origin vNext_feature_1
-  7   打开服务器网站，发起pull request请求
-  8   选择从feature_1分支合并到vNext分支
-  9   管理员审批拉取请求
 
-  10  看到自己的拉取请求已完成
-  11  删除远程feature_1分支 Git push origin :vNext_feature_1
-  12  到部署网站上申请部署fvt测试
-  13  协助测试完成fvt测试
-  9->9.1  如果管理员发现合并冲突，拉取请求被拒绝
-  10.1    切换到vNext分支  Git checkout vNext
-  11.1    获取最新vNext信息 Git pull origin vNext
-  12.1    切换到feature_1分支  Git checkout vNext_feature_1
-  13.1    本地合并vNext和feature_1 Git merge vNext
-  14.1    提交合并结果  Git commit
-  15.1    重复6~13步骤
-  13->13.2    如测试发现有bug， fvt测试不通过
-  14.2    重复1~13步骤
+## 5. Git tips
 
-### 解决 pullRequest 冲突
+### 5.1. 解决 pullRequest 冲突
 
-eg. vNext_promotion 合并到 vNext 时冲突
+  eg. vNext_promotion 合并到 vNext 时冲突
 
-- 首先，你将需要确保 vNext_promotion 和 vNext 分支是最新的: git fetch origin git checkout -b vNext_promotion origin/vNext_promotion
-- 接下来，将 vNext 中的更改合并到 vNext_promotion 中，并解决冲突: git checkout vNext_promotion git merge origin/vNext
-- 然后，在生成和测试代码后，用最新的更改更新拉取请求: git push origin vNext_promotion 返回此处，以完成拉取请求git
+  - `git pull`拉取最新代码到本地，工作区不能有 modified 文件；若有，先 `git stash` 代码，再 `git pull`,再将 `stash` 的代码 `git stash pop` 恢复到工作区
+  - `git fetch origin vNext` & `git merge origin/vNext` 手动合并代码，发现并解决冲突后再推送代码
+  - `git push` 发起PR
 
-[@咪醤](mailto:zzb0b0@126.com)
+
+
+建议优先参考 [GitBook](https://git-scm.com/book/zh/v2)

@@ -836,11 +836,11 @@ pre .javascript .function {
   bottom: -100px;
   right: 50px;
   z-index: 1050;
-  padding: 0 6px;
-  width: 25px;
+  padding: 5px 0;
+  width: 40px;
   background: #1fa67a;
   font-size: 12px;
-  opacity: 0.6;
+  opacity: 0.5;
   color: #fff;
   cursor: pointer;
   text-align: center;
@@ -1053,9 +1053,11 @@ pre .javascript .function {
 }
 .posts-expand .post-body h2 {
   margin: 35px 0 20px;
+  font-size: 26px;
 }
 .posts-expand .post-body h3 {
   margin: 20px 0 20px;
+  font-size: 20px;
 }
 .posts-expand .post-body h2 .header-anchor,
 .posts-expand .post-body h3 .header-anchor,
@@ -1559,7 +1561,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2eff;
+  background: #ff6cdb;
 }
 .links-of-blogroll {
   font-size: 14px;
