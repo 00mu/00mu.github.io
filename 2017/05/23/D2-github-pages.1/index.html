@@ -1,0 +1,637 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="git,GitHub pages," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="大二的时候开始摆置WordPress搭建Blog，写的都是一些流水账，并没有坚持写来下，毕业后渐渐不再维护了。就是那时的摸索把玩对 Html + CSS 产生了兴趣，从此成了一名切图仔。现在算重拾乐趣，何况 GitHub 提供福利，无需域名服务器便可拥有个人站点。「GitHub pages」+「Hexo」搭建博客，用到的资料和步骤整理如下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub pages 搭建记录">
+<meta property="og:url" content="https://00mu.github.io/2017/05/23/D2-github-pages.1/index.html">
+<meta property="og:site_name" content="O X">
+<meta property="og:description" content="大二的时候开始摆置WordPress搭建Blog，写的都是一些流水账，并没有坚持写来下，毕业后渐渐不再维护了。就是那时的摸索把玩对 Html + CSS 产生了兴趣，从此成了一名切图仔。现在算重拾乐趣，何况 GitHub 提供福利，无需域名服务器便可拥有个人站点。「GitHub pages」+「Hexo」搭建博客，用到的资料和步骤整理如下。">
+<meta property="og:updated_time" content="2017-05-23T11:03:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GitHub pages 搭建记录">
+<meta name="twitter:description" content="大二的时候开始摆置WordPress搭建Blog，写的都是一些流水账，并没有坚持写来下，毕业后渐渐不再维护了。就是那时的摸索把玩对 Html + CSS 产生了兴趣，从此成了一名切图仔。现在算重拾乐趣，何况 GitHub 提供福利，无需域名服务器便可拥有个人站点。「GitHub pages」+「Hexo」搭建博客，用到的资料和步骤整理如下。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://00mu.github.io/2017/05/23/D2-github-pages.1/"/>
+
+  <title> GitHub pages 搭建记录 | O X </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=57638696";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">O X</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">看看能坚持到哪</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                GitHub pages 搭建记录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-23T19:03:07+08:00" content="2017-05-23">
+              2017-05-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>大二的时候开始摆置WordPress搭建Blog，写的都是一些流水账，并没有坚持写来下，毕业后渐渐不再维护了。就是那时的摸索把玩对 Html + CSS 产生了兴趣，从此成了一名切图仔。现在算重拾乐趣，何况 GitHub 提供福利，无需域名服务器便可拥有个人站点。「GitHub pages」+「Hexo」搭建博客，用到的资料和步骤整理如下。</p>
+<a id="more"></a>
+<h2 id="1-git-环境配置-GitHub-与-git-关联"><a href="#1-git-环境配置-GitHub-与-git-关联" class="headerlink" title="1. git 环境配置  - GitHub 与 git 关联"></a>1. git 环境配置  - GitHub 与 git 关联</h2><p>首先安装好 Git Bash ，按步骤将 git 与 GitHub 关联起来</p>
+<h3 id="1-1-检查-SSH-keys-设置"><a href="#1-1-检查-SSH-keys-设置" class="headerlink" title="1.1. 检查 SSH keys 设置"></a>1.1. 检查 SSH keys 设置</h3><blockquote>
+<p>$ cd ~/. ssh</p>
+</blockquote>
+<p>  检查本机的ssh密钥，提示 “ No such file or directory “ 则需要生成新的 SSH keys</p>
+<h3 id="1-2-生成新的-SSH-Key"><a href="#1-2-生成新的-SSH-Key" class="headerlink" title="1.2. 生成新的 SSH Key"></a>1.2. 生成新的 SSH Key</h3><blockquote>
+<p>$ ssh-keygen -t rsa -C “xxx@xxxmail.com”</p>
+</blockquote>
+<p>  一路回车，看到下面的界面，就表明生成成功了</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">The key fingerprint is:</div><div class="line">SHA256:deq65ahsK3kXY7xuTo5eIplsJLnKlwJTlHPcxb9v/GQ xxx@xxx.com</div><div class="line">The key<span class="string">'s randomart image is:</span></div><div class="line">+---[RSA 2048]----+</div><div class="line">|   o . o.        |</div><div class="line">|  + o . .        |</div><div class="line">| . o     .. .    |</div><div class="line">|  ..     ..o     |</div><div class="line">| .o .  .S ..     |</div><div class="line">|o  = o  =..      |</div><div class="line">|... B...o+oo  E  |</div><div class="line">|.o +ooo*+=  +o   |</div><div class="line">|..o  =*BB... ..  |</div><div class="line">+----[SHA256]-----+</div></pre></td></tr></table></figure>
+<h3 id="1-3-将-SSH-keys-添加到-GitHub"><a href="#1-3-将-SSH-keys-添加到-GitHub" class="headerlink" title="1.3. 将 SSH keys 添加到 GitHub"></a>1.3. 将 SSH keys 添加到 GitHub</h3><p>  根据上面窗口提示找到 id_rsa.pub 文件，内容复制到 GitHub.com &gt; Personal settings &gt; SSH keys (<em>New SSH key</em>)，保存即可。</p>
+<h3 id="1-4-测试关联是否成功"><a href="#1-4-测试关联是否成功" class="headerlink" title="1.4. 测试关联是否成功"></a>1.4. 测试关联是否成功</h3><blockquote>
+<p>$ ssh -T git@github.com</p>
+</blockquote>
+<p>  对话输入 yes 后，提示如下界面就成功了</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi xx! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+<h3 id="1-5-设置账号信息"><a href="#1-5-设置账号信息" class="headerlink" title="1.5. 设置账号信息"></a>1.5. 设置账号信息</h3><blockquote>
+<p>$ git config –global user.name “your_name” $ git config –global user.email “your_email@youremail.com”</p>
+<p>$ git config –list // 查看git配置信息</p>
+</blockquote>
+<h2 id="2-博客系统用-HEXO"><a href="#2-博客系统用-HEXO" class="headerlink" title="2. 博客系统用 HEXO"></a>2. 博客系统用 HEXO</h2><p>  <a href="http://xiaolai.li/2016/06/22/makecs-build-a-blog-with-hexo-on-github/#more" target="_blank" rel="external">参照笑来老师的博客</a>，有详细明了的步骤，非常好用，祝成功</p>
+<h2 id="3-修改主题"><a href="#3-修改主题" class="headerlink" title="3. 修改主题"></a>3. 修改主题</h2><p>  <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT.Pisces下载</a><br>  <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">NexT.Pisces使用文档</a></p>
+<h3 id="3-1-一些调整"><a href="#3-1-一些调整" class="headerlink" title="3.1. 一些调整"></a>3.1. 一些调整</h3><ul>
+<li><p>添加「标签」页面<br>[<a href="http://theme-next.iissnan.com/theme-settings.html#tags-page" target="_blank" rel="external">http://theme-next.iissnan.com/theme-settings.html#tags-page</a>]</p>
+</li>
+<li><p>侧边栏文章目录改成无序列表<br>[<a href="https://github.com/iissnan/hexo-theme-next/issues/857" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next/issues/857</a>]</p>
+</li>
+</ul>
+<h3 id="3-2-直接使用本站主题"><a href="#3-2-直接使用本站主题" class="headerlink" title="3.2. 直接使用本站主题"></a>3.2. 直接使用本站主题</h3><p>  <a href="https://github.com/00mu/00mu.github.io/tree/source" target="_blank" rel="external">NexT.Pisces-个人版</a>，位于00mu.github.io库source分支下</p>
+<h2 id="4-熟记几个命令"><a href="#4-熟记几个命令" class="headerlink" title="4. 熟记几个命令"></a>4. 熟记几个命令</h2><ul>
+<li><code>hexo generate</code> 编译</li>
+<li><code>hexo server</code> 启动本地服务器，localhost:4000 可见</li>
+<li><code>hexo deploy</code> 编译文件部署到 Github ，<a href="https://00mu.github.io/">https://00mu.github.io/</a> 可见</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>  另外介绍下 GitHub Pages 搭建静态页面，直接把资源push上即可</p>
+<p>  <a href="https://pages.github.com/" target="_blank" rel="external">参见官方介绍</a></p>
+<ol>
+<li>创建一个与用户名一致的仓库，如 00mu.github.com 。<br>   一个 GitHub 账户只有一个，此仓库也将是你的主页地址</li>
+<li>将仓库 clone 到本地</li>
+<li>跟目录编辑 index.html ，此页面将作为主页</li>
+<li>push 到远程仓库</li>
+<li>随后访你的主页即可呈现。</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag">#git</a>
+          
+            <a href="/tags/GitHub-pages/" rel="tag">#GitHub pages</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/23/D1-gitbash/" rel="next" title="Git 入门手册">
+                <i class="fa fa-chevron-left"></i> Git 入门手册
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/zhoubo.jpg"
+               alt="周波" />
+          <p class="site-author-name" itemprop="name">周波</p>
+          <p class="site-description motion-element" itemprop="description">干啥就干啥，别墨迹，别瞎折腾</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/00mu/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://codepen.io/zhoubo/" target="_blank" title="CODEPEN">
+                  
+                    <i class="fa fa-fw fa-codepen"></i>
+                  
+                  CODEPEN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-git-环境配置-GitHub-与-git-关联"><span class="nav-text">1. git 环境配置  - GitHub 与 git 关联</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-检查-SSH-keys-设置"><span class="nav-text">1.1. 检查 SSH keys 设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-生成新的-SSH-Key"><span class="nav-text">1.2. 生成新的 SSH Key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-将-SSH-keys-添加到-GitHub"><span class="nav-text">1.3. 将 SSH keys 添加到 GitHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-测试关联是否成功"><span class="nav-text">1.4. 测试关联是否成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-设置账号信息"><span class="nav-text">1.5. 设置账号信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-博客系统用-HEXO"><span class="nav-text">2. 博客系统用 HEXO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-修改主题"><span class="nav-text">3. 修改主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-一些调整"><span class="nav-text">3.1. 一些调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-直接使用本站主题"><span class="nav-text">3.2. 直接使用本站主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-熟记几个命令"><span class="nav-text">4. 熟记几个命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-text">其他</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <a class="author" href="mailto:595754999@qq.com" itemprop="copyrightHolder">周波</a>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
